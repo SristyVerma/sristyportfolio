@@ -309,27 +309,27 @@ export default function Home() {
         </section>
 
         <section className="editor-area">
-          <div className="tabs-row">
+          <div className="tabs-row" role="tablist" aria-label="Open files">
             {openTabs.map((tab) => (
-              <button
-                key={tab}
-                className={activeTab === tab ? "tab active" : "tab"}
-                onClick={() => setActiveTab(tab)}
-                type="button"
-              >
-                <span>{getFileName(tab)}</span>
-                <span
+              <div key={tab} className={activeTab === tab ? "tab active" : "tab"}>
+                <button
+                  className="tab-trigger"
+                  onClick={() => setActiveTab(tab)}
+                  type="button"
+                  role="tab"
+                  aria-selected={activeTab === tab}
+                >
+                  <span className="tab-label">{getFileName(tab)}</span>
+                </button>
+                <button
                   className="close"
-                  onClick={(event) => {
-                    event.stopPropagation();
-                    closeTab(tab);
-                  }}
-                  role="button"
-                  tabIndex={0}
+                  onClick={() => closeTab(tab)}
+                  type="button"
+                  aria-label={`Close ${getFileName(tab)}`}
                 >
                   ×
-                </span>
-              </button>
+                </button>
+              </div>
             ))}
           </div>
 
