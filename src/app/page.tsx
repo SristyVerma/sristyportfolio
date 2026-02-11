@@ -259,8 +259,7 @@ export default function Home() {
       return (
         <div key={node.id}>
           <button
-            className="tree-item"
-            style={{ paddingLeft: `${8 + level * 16}px` }}
+            className={`tree-item tree-folder level-${level}`}
             onClick={() => toggleFolder(node.id)}
             type="button"
           >
@@ -275,8 +274,7 @@ export default function Home() {
     return (
       <button
         key={node.id}
-        className={`tree-item tree-file ${activeTab === node.id ? "active" : ""}`}
-        style={{ paddingLeft: `${24 + level * 16}px` }}
+        className={`tree-item tree-file level-${level} ${activeTab === node.id ? "active" : ""}`}
         onClick={() => openFile(node.id)}
         type="button"
       >

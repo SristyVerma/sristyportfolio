@@ -161,6 +161,22 @@ body {
   cursor: pointer;
   font-size: 13px;
   text-align: left;
+  padding-right: 6px;
+}
+
+.tree-item.level-0 {
+  padding-left: 8px;
+}
+
+.tree-item.level-1 {
+  padding-left: 24px;
+}
+
+.tree-item span:last-child {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .tree-item:hover {
@@ -338,19 +354,65 @@ body {
 
 @media (max-width: 840px) {
   .workspace {
-    grid-template-columns: 52px 1fr;
+    grid-template-columns: 44px minmax(118px, 34vw) minmax(0, 1fr);
+    min-height: calc(100vh - 44px);
+  }
+
+  .activity-bar {
+    border-right: 1px solid var(--border);
+    border-bottom: 0;
+    padding-top: 10px;
+  }
+
+  .activity-item {
+    width: 34px;
+    height: 34px;
+    border-left: 2px solid transparent;
+    border-bottom: 0;
+  }
+
+  .activity-item.active {
+    border-left-color: var(--accent);
+    border-bottom-color: transparent;
   }
 
   .sidebar {
-    display: none;
+    display: flex;
+    border-right: 1px solid var(--border);
+    border-bottom: 0;
+    min-height: 0;
+  }
+
+  .panel-title {
+    padding: 10px 8px;
+    font-size: 10px;
+  }
+
+  .tree-item {
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .tree-item.level-0 {
+    padding-left: 6px;
+  }
+
+  .tree-item.level-1 {
+    padding-left: 16px;
   }
 
   .editor-area {
-    grid-column: 2;
+    grid-column: 3;
+    grid-row: 1;
+    grid-template-rows: 42px 1fr 140px;
+    min-height: 0;
+  }
+
+  .tab {
+    min-width: 132px;
   }
 
   .menu {
     display: none;
   }
 }
-
