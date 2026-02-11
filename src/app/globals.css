@@ -161,6 +161,22 @@ body {
   cursor: pointer;
   font-size: 13px;
   text-align: left;
+  padding-right: 6px;
+}
+
+.tree-item.level-0 {
+  padding-left: 8px;
+}
+
+.tree-item.level-1 {
+  padding-left: 24px;
+}
+
+.tree-item span:last-child {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .tree-item:hover {
@@ -338,7 +354,7 @@ body {
 
 @media (max-width: 840px) {
   .workspace {
-    grid-template-columns: 46px minmax(96px, 28vw) minmax(0, 1fr);
+    grid-template-columns: 44px minmax(118px, 34vw) minmax(0, 1fr);
     min-height: calc(100vh - 44px);
   }
 
@@ -375,6 +391,14 @@ body {
   .tree-item {
     font-size: 12px;
     gap: 6px;
+  }
+
+  .tree-item.level-0 {
+    padding-left: 6px;
+  }
+
+  .tree-item.level-1 {
+    padding-left: 16px;
   }
 
   .editor-area {
