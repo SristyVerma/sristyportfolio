@@ -338,19 +338,44 @@ body {
 
 @media (max-width: 840px) {
   .workspace {
-    grid-template-columns: 52px 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 48px minmax(180px, 42vh) minmax(0, 1fr);
+  }
+
+  .activity-bar {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+    padding: 0 10px;
+  }
+
+  .activity-item {
+    border-left: 0;
+    border-bottom: 2px solid transparent;
+  }
+
+  .activity-item.active {
+    border-left-color: transparent;
+    border-bottom-color: var(--accent);
   }
 
   .sidebar {
-    display: none;
+    display: flex;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+    min-height: 0;
   }
 
   .editor-area {
-    grid-column: 2;
+    grid-column: 1;
+    grid-row: 3;
+    grid-template-rows: 42px 1fr 160px;
+    min-height: 0;
   }
 
   .menu {
     display: none;
   }
 }
-
