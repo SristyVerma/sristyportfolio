@@ -338,19 +338,57 @@ body {
 
 @media (max-width: 840px) {
   .workspace {
-    grid-template-columns: 52px 1fr;
+    grid-template-columns: 46px minmax(96px, 28vw) minmax(0, 1fr);
+    min-height: calc(100vh - 44px);
+  }
+
+  .activity-bar {
+    border-right: 1px solid var(--border);
+    border-bottom: 0;
+    padding-top: 10px;
+  }
+
+  .activity-item {
+    width: 34px;
+    height: 34px;
+    border-left: 2px solid transparent;
+    border-bottom: 0;
+  }
+
+  .activity-item.active {
+    border-left-color: var(--accent);
+    border-bottom-color: transparent;
   }
 
   .sidebar {
-    display: none;
+    display: flex;
+    border-right: 1px solid var(--border);
+    border-bottom: 0;
+    min-height: 0;
+  }
+
+  .panel-title {
+    padding: 10px 8px;
+    font-size: 10px;
+  }
+
+  .tree-item {
+    font-size: 12px;
+    gap: 6px;
   }
 
   .editor-area {
-    grid-column: 2;
+    grid-column: 3;
+    grid-row: 1;
+    grid-template-rows: 42px 1fr 140px;
+    min-height: 0;
+  }
+
+  .tab {
+    min-width: 132px;
   }
 
   .menu {
     display: none;
   }
 }
-
