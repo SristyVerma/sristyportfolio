@@ -17,11 +17,7 @@ const fileTree: FileNode[] = [
     id: "about",
     name: "about",
     type: "folder",
-    children: [
-      { id: "about/intro.md", name: "intro.md", type: "file" },
-      { id: "about/experience.md", name: "experience.md", type: "file" },
-      { id: "about/education.md", name: "education.md", type: "file" },
-    ],
+    children: [{ id: "about/about.md", name: "about.md", type: "file" }],
   },
   {
     id: "projects",
@@ -95,9 +91,27 @@ const fileTree: FileNode[] = [
 ];
 
 const fileContent: Record<string, string> = {
-  "about/intro.md": `# Sristy\n\nFrontend Developer focused on polished UI systems and developer-focused products.\n\n- 3+ years building React and Next.js experiences\n- Strong design-to-code execution\n- Performance and accessibility first mindset`,
-  "about/experience.md": `# Experience\n\n## Senior Frontend Developer\n**Product Studio** · 2022 - Present\n- Led a design system migration reducing UI bugs by 35%\n- Built reusable dashboard primitives for 8+ products\n\n## Frontend Engineer\n**Tech Agency** · 2020 - 2022\n- Delivered production apps for fintech and e-commerce clients`,
-  "about/education.md": `# Education\n\nB.Tech in Computer Science\n- UI Engineering\n- Human Computer Interaction\n- Data Structures & Algorithms`,
+  "about/about.md": `# About Sristy
+
+## Intro
+Frontend-focused developer who builds bold, polished interfaces that connect user needs with business goals.
+
+## Experience
+- Built scalable React/Next.js interfaces with reusable component systems
+- Improved engagement through thoughtful motion and cleaner UX flows
+- Delivered freelance projects end-to-end, from wireframes to deployment
+
+## Education
+- Bachelor's in Computer Science (or related technical discipline)
+- Continuous learning in frontend architecture, accessibility, and performance
+
+## Skills
+- JavaScript / TypeScript
+- React / Next.js
+- Node.js
+- UI Animation & Responsive Design
+- REST API Integration
+- GitHub Collaboration`,
   "projects/featured.md": `# Featured Projects\n\n1. VS Code Portfolio UI\n2. Analytics Dashboard\n3. AI Notes Workspace`,
   "projects/all-projects.md": `# All Projects\n\n- E-commerce Storefront\n- Issue Tracker\n- Team Collaboration App\n- Documentation Platform\n- Portfolio Generator`,
   "projects/case-studies.md": `# Case Studies\n\n- Improving Lighthouse score from 72 to 98\n- Reducing bundle size by 41% with code splitting\n- Increasing retention with UX onboarding`,
@@ -144,7 +158,7 @@ const terminalLines = [
   "> linkedin.com/in/sristy",
 ];
 
-const defaultFile = "about/intro.md";
+const defaultFile = "about/about.md";
 
 const initialExpanded = new Set(fileTree.map((node) => node.id));
 
@@ -259,6 +273,7 @@ export default function Home() {
         </nav>
         <div className="workspace-title">sristyportfolio — portfolio</div>
       </header>
+
 
       <main className="workspace">
         <aside className="activity-bar">
