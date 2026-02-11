@@ -91,27 +91,59 @@ const fileTree: FileNode[] = [
 ];
 
 const fileContent: Record<string, string> = {
-  "about/about.md": `# About Sristy
+  "about/about.md": `# About — Recruiter Snapshot
+
+**Tagline:** Frontend-focused developer who builds bold, high-impact UI that is fast, accessible, and production-ready.
+
+---
 
 ## Intro
-Frontend-focused developer who builds bold, polished interfaces that connect user needs with business goals.
+I translate product goals into polished interfaces that users enjoy and teams can maintain.
+
+**What I prioritize:**
+- Clean architecture and reusable components
+- Smooth animation with purposeful interaction design
+- Performance and accessibility from day one
+
+---
 
 ## Experience
-- Built scalable React/Next.js interfaces with reusable component systems
-- Improved engagement through thoughtful motion and cleaner UX flows
-- Delivered freelance projects end-to-end, from wireframes to deployment
+### Frontend Developer
+- Built scalable React/Next.js interfaces using reusable component systems
+- Improved user engagement through micro-interactions and better UI flow
+- Collaborated with design and backend teams to ship production features faster
+
+### UI Engineer
+- Converted design systems into maintainable code standards
+- Reduced UI inconsistencies by standardizing shared patterns and tokens
+- Focused on responsiveness, quality, and cross-browser behavior
+
+### Freelance Projects
+- Delivered portfolio and business websites end-to-end
+- Managed scope from wireframes to deployment and final QA
+
+---
 
 ## Education
 - Bachelor's in Computer Science (or related technical discipline)
-- Continuous learning in frontend architecture, accessibility, and performance
+- Continued learning in frontend architecture, accessibility, and web performance
+- Practical project-based learning through real client and portfolio builds
+
+---
 
 ## Skills
-- JavaScript / TypeScript
-- React / Next.js
-- Node.js
-- UI Animation & Responsive Design
-- REST API Integration
-- GitHub Collaboration`,
+**Core:** JavaScript, TypeScript, React, Next.js, Node.js
+
+**UI/UX:** Responsive Design, UI Animation, Design-to-Code, Interaction Design
+
+**Engineering:** REST API Integration, Performance Optimization, Git/GitHub, Debugging
+
+---
+
+## Highlights (Recruiter Quick View)
+- Projects Delivered: **20+**
+- Typical Lighthouse Target: **90+**
+- UI Quality Focus: **Reusable + Scalable + Accessible**`,
   "projects/featured.md": `# Featured Projects\n\n1. VS Code Portfolio UI\n2. Analytics Dashboard\n3. AI Notes Workspace`,
   "projects/all-projects.md": `# All Projects\n\n- E-commerce Storefront\n- Issue Tracker\n- Team Collaboration App\n- Documentation Platform\n- Portfolio Generator`,
   "projects/case-studies.md": `# Case Studies\n\n- Improving Lighthouse score from 72 to 98\n- Reducing bundle size by 41% with code splitting\n- Increasing retention with UX onboarding`,
