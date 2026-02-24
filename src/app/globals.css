@@ -311,12 +311,17 @@ body {
   padding: 20px;
 }
 
-.editor-content pre {
+.editor-content pre,
+.editor-text {
   margin: 0;
   font-family: var(--font-geist-mono), "Consolas", monospace;
   font-size: 14px;
   line-height: 1.6;
   white-space: pre-wrap;
+}
+
+.editor-text a {
+  color: var(--accent);
 }
 
 .terminal {

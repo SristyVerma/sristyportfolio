@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { Fragment, ReactNode, useEffect, useMemo, useState } from "react";
 
 type Activity = "explorer" | "settings";
 type Theme = "dark" | "light";
@@ -40,6 +40,7 @@ const fileTree: FileNode[] = [
     name: "contact",
     type: "folder",
     children: [
+      { id: "contact/contact-details.md", name: "contact-details.md", type: "file" },
       { id: "contact/email.md", name: "email.md", type: "file" },
       { id: "contact/social-links.md", name: "social-links.md", type: "file" },
       { id: "contact/availability.md", name: "availability.md", type: "file" },
@@ -119,6 +120,7 @@ My experience goes beyond UI — I implement complete feature workflows, API int
   "projects/all-projects.md": `# All Projects\n\n- E-commerce Storefront\n- Issue Tracker\n- Team Collaboration App\n- Documentation Platform\n- Portfolio Generator`,
   "projects/case-studies.md": `# Case Studies\n\n- Improving Lighthouse score from 72 to 98\n- Reducing bundle size by 41% with code splitting\n- Increasing retention with UX onboarding`,
   "skills/skillset.md": `# Skills Arsenal 🚀\n\n> I build production-ready frontend systems that scale with product complexity, user growth, and business needs.\n\n---\n\n## 🎨 Frontend\n- React.js\n- Next.js\n- JavaScript (ES6+)\n- TypeScript\n- Redux Toolkit\n- Tailwind CSS\n\n## 🧱 Architecture\n- Role-Based Systems\n- Scalable Component Design\n- State Management\n\n## 🔌 Integrations\n- REST APIs\n- Stripe Integration\n- Authentication & Payment Workflows\n\n## 🛠 Product Development\n- Booking Systems\n- Subscriptions\n- Loyalty Engines\n- POS\n- Chatbot Modules\n\n## ⚙️ Engineering\n- Performance Optimization\n- Git/GitHub\n- Debugging\n\n---\n\n**Core Strength:** Turning complex business workflows into smooth, reliable product experiences.`,
+  "contact/contact-details.md": `# Contact Details\n\n- LinkedIn: www.linkedin.com/in/sristy-verma-211ba73a8\n- Email: sristy.verma.work@gmail.com\n- Contact: 7905704385\n- GitHub: https://github.com/SristyVerma`,
   "contact/email.md": `# Email\n\nhello@sristy.dev`,
   "contact/social-links.md": `# Social\n\n- GitHub: github.com/sristy\n- LinkedIn: linkedin.com/in/sristy\n- Twitter: x.com/sristy`,
   "contact/availability.md": `# Availability\n\nOpen for remote frontend opportunities and freelance UI engineering projects.`,
@@ -142,6 +144,60 @@ const terminalLines = [
 const defaultFile = "about/about.md";
 
 const initialExpanded = new Set(fileTree.map((node) => node.id));
+
+const linkPattern = /(https?:\/\/[^\s]+|www\.[^\s]+|[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}|\b\d{10}\b)/g;
+
+function linkifyContent(content: string) {
+  return content.split("\n").map((line, lineIndex, lines) => {
+    const parts = line.split(linkPattern);
+
+    return (
+      <Fragment key={`line-${lineIndex}`}>
+        {parts.map((part, partIndex) => {
+          if (!part) {
+            return null;
+          }
+
+          const isUrl = part.startsWith("http://") || part.startsWith("https://") || part.startsWith("www.");
+          const isEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(part);
+          const isPhone = /^\d{10}$/.test(part);
+
+          if (isUrl) {
+            const href = part.startsWith("www.") ? `https://${part}` : part;
+            return (
+              <a key={`part-${lineIndex}-${partIndex}`} href={href} target="_blank" rel="noreferrer">
+                {part}
+              </a>
+            );
+          }
+
+          if (isEmail) {
+            return (
+              <a key={`part-${lineIndex}-${partIndex}`} href={`mailto:${part}`}>
+                {part}
+              </a>
+            );
+          }
+
+          if (isPhone) {
+            return (
+              <a key={`part-${lineIndex}-${partIndex}`} href={`tel:${part}`}>
+                {part}
+              </a>
+            );
+          }
+
+          return <Fragment key={`part-${lineIndex}-${partIndex}`}>{part}</Fragment>;
+        })}
+        {lineIndex < lines.length - 1 ? <br /> : null}
+      </Fragment>
+    );
+  });
+}
+
+function renderFileContent(content: string): ReactNode {
+  return <div className="editor-text">{linkifyContent(content)}</div>;
+}
 
 function getFileName(path: string) {
   const pieces = path.split("/");
@@ -328,7 +384,7 @@ export default function Home() {
           </div>
 
           <article className="editor-content">
-            <pre>{fileContent[activeTab]}</pre>
+            {renderFileContent(fileContent[activeTab])}
           </article>
 
           <section className="terminal">
