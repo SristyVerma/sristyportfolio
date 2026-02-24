@@ -112,12 +112,11 @@ My experience goes beyond UI — I implement complete feature workflows, API int
 ---
 
 ## Skills
-**Core:** JavaScript, React,Redux Toolkit, Tailwind CSS, TypeScript,Next.js, Node.js
-
-**UI/UX:** Responsive Design, UI Animation, Design-to-Code, Interaction Design
-
-**Engineering:** REST API Integration, Performance Optimization, Git/GitHub, Debugging
-
+**Frontend: React.js, Next.js, JavaScript (ES6+), TypeScript, Redux Toolkit, Tailwind CSS
+**Architecture: Role-Based Systems, Scalable Component Design, State Management
+**Integrations: REST APIs, Stripe Integration, Authentication & Payment Workflows
+**Product Development: Booking Systems, Subscriptions, Loyalty Engines, POS, Chatbot Modules
+**Engineering: Performance Optimization, Git/GitHub, Debugging
 ---
 
 `,
