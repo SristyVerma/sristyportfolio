@@ -39,12 +39,7 @@ const fileTree: FileNode[] = [
     id: "contact",
     name: "contact",
     type: "folder",
-    children: [
-      { id: "contact/contact-details.md", name: "contact-details.md", type: "file" },
-      { id: "contact/email.md", name: "email.md", type: "file" },
-      { id: "contact/social-links.md", name: "social-links.md", type: "file" },
-      { id: "contact/availability.md", name: "availability.md", type: "file" },
-    ],
+    children: [{ id: "contact/contact-details.md", name: "contact-details.md", type: "file" }],
   },
   {
     id: "resume",
@@ -121,9 +116,6 @@ My experience goes beyond UI — I implement complete feature workflows, API int
   "projects/case-studies.md": `# Case Studies\n\n- Improving Lighthouse score from 72 to 98\n- Reducing bundle size by 41% with code splitting\n- Increasing retention with UX onboarding`,
   "skills/skillset.md": `# Skills Arsenal 🚀\n\n> I build production-ready frontend systems that scale with product complexity, user growth, and business needs.\n\n---\n\n## 🎨 Frontend\n- React.js\n- Next.js\n- JavaScript (ES6+)\n- TypeScript\n- Redux Toolkit\n- Tailwind CSS\n\n## 🧱 Architecture\n- Role-Based Systems\n- Scalable Component Design\n- State Management\n\n## 🔌 Integrations\n- REST APIs\n- Stripe Integration\n- Authentication & Payment Workflows\n\n## 🛠 Product Development\n- Booking Systems\n- Subscriptions\n- Loyalty Engines\n- POS\n- Chatbot Modules\n\n## ⚙️ Engineering\n- Performance Optimization\n- Git/GitHub\n- Debugging\n\n---\n\n**Core Strength:** Turning complex business workflows into smooth, reliable product experiences.`,
   "contact/contact-details.md": `# Contact Details\n\n- LinkedIn: www.linkedin.com/in/sristy-verma-211ba73a8\n- Email: sristy.verma.work@gmail.com\n- Contact: 7905704385\n- GitHub: https://github.com/SristyVerma`,
-  "contact/email.md": `# Email\n\nhello@sristy.dev`,
-  "contact/social-links.md": `# Social\n\n- GitHub: github.com/sristy\n- LinkedIn: linkedin.com/in/sristy\n- Twitter: x.com/sristy`,
-  "contact/availability.md": `# Availability\n\nOpen for remote frontend opportunities and freelance UI engineering projects.`,
   "resume/resume.pdf": `PDF preview unavailable in mock editor.\n\nUse download action in real implementation.`,
 };
 
