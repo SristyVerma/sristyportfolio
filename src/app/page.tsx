@@ -51,42 +51,10 @@ const fileTree: FileNode[] = [
     ],
   },
   {
-    id: "achievements",
-    name: "achievements",
-    type: "folder",
-    children: [
-      {
-        id: "achievements/certifications.md",
-        name: "certifications.md",
-        type: "file",
-      },
-      { id: "achievements/awards.md", name: "awards.md", type: "file" },
-      { id: "achievements/talks.md", name: "talks.md", type: "file" },
-    ],
-  },
-  {
-    id: "blogs",
-    name: "blogs",
-    type: "folder",
-    children: [
-      { id: "blogs/latest.md", name: "latest.md", type: "file" },
-      { id: "blogs/writing-topics.md", name: "writing-topics.md", type: "file" },
-    ],
-  },
-  {
     id: "resume",
     name: "resume",
     type: "folder",
     children: [{ id: "resume/resume.pdf", name: "resume.pdf", type: "file" }],
-  },
-  {
-    id: "config",
-    name: "config",
-    type: "folder",
-    children: [
-      { id: "config/theme.json", name: "theme.json", type: "file" },
-      { id: "config/settings.json", name: "settings.json", type: "file" },
-    ],
   },
 ];
 
@@ -163,22 +131,7 @@ My experience goes beyond UI — I implement complete feature workflows, API int
   "contact/email.md": `# Email\n\nhello@sristy.dev`,
   "contact/social-links.md": `# Social\n\n- GitHub: github.com/sristy\n- LinkedIn: linkedin.com/in/sristy\n- Twitter: x.com/sristy`,
   "contact/availability.md": `# Availability\n\nOpen for remote frontend opportunities and freelance UI engineering projects.`,
-  "achievements/certifications.md": `# Certifications\n\n- Meta Frontend Developer\n- Google UX Design\n- AWS Cloud Practitioner`,
-  "achievements/awards.md": `# Awards\n\n- Hackathon Winner 2023\n- Best UI Implementation Award\n- Campus Innovation Grant`,
-  "achievements/talks.md": `# Talks\n\n- Building scalable component libraries\n- Developer portfolios that stand out\n- Modern React performance`,
-  "blogs/latest.md": `# Latest Articles\n\n- Crafting VS Code Inspired Interfaces\n- Design Tokens in Real Products\n- Better State Management Patterns`,
-  "blogs/writing-topics.md": `# Writing Topics\n\n- Frontend architecture\n- Accessibility\n- Developer experience\n- Career growth`,
   "resume/resume.pdf": `PDF preview unavailable in mock editor.\n\nUse download action in real implementation.`,
-  "config/theme.json": `{
-  "activeTheme": "dark",
-  "availableThemes": ["dark", "light"]
-}`,
-  "config/settings.json": `{
-  "fontSize": 14,
-  "wordWrap": "on",
-  "minimap": false,
-  "terminal.defaultProfile": "bash"
-}`,
 };
 
 const terminalLines = [
