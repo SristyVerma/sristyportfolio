@@ -91,48 +91,60 @@ const fileTree: FileNode[] = [
 ];
 
 const fileContent: Record<string, string> = {
-  "about/about.md": `# About — Recruiter Snapshot
+  "about/about.md": `# About 
 
-**Tagline:** Frontend-focused developer who builds bold, high-impact UI that is fast, accessible, and production-ready.
+**Tagline:** Frontend Engineer building scalable SaaS products with complex integrations and production-grade architecture.
 
 ---
 
 ## Intro
-I translate product goals into polished interfaces that users enjoy and teams can maintain.
+I am a results-driven Frontend Developer specializing in building scalable SaaS applications using React and Redux.
+I have contributed to a full-scale business automation platform featuring multi-role dashboards (Business, Client, Instructor), Stripe payment integration, POS system, subscription management, booking engine, loyalty programs and a chatbot for automated support.
+My experience goes beyond UI — I implement complete feature workflows, API integrations and state management for production-ready applications.
 
 **What I prioritize:**
-- Clean architecture and reusable components
-- Smooth animation with purposeful interaction design
-- Performance and accessibility from day one
-
+-Building scalable multi-role systems that handle real business complexity
+-Creating reusable, modular component architecture that supports long-term product growth
+-Implementing complete feature workflows — from UI to API integration
+-Delivering seamless user journeys across payments, bookings and dashboards
+-Ensuring performance, accessibility and clean state management from the foundation
 ---
 
 ## Experience
-### Frontend Developer
-- Built scalable React/Next.js interfaces using reusable component systems
-- Improved user engagement through micro-interactions and better UI flow
-- Collaborated with design and backend teams to ship production features faster
+### Frontend Engineer (2.5+ Years)
+-Worked on a production-level multi-role SaaS platform designed for business automation.
+-Developed role-based dashboards for Business Owners, Clients and Instructors with protected routing and scalable architecture.
+-Implemented Stripe payment integration, handling checkout flows, onboarding and transaction lifecycle.
+-Built POS workflows and subscription management systems with recurring billing logic.
+-Designed and developed booking engine with scheduling, availability and cancellation policies.
+-Created loyalty and rewards system integrated with customer transactions.
+-Built analytics dashboards for revenue tracking and operational insights.
+-Integrated chatbot module to automate support and improve user experience.
+-Managed complex application state using Redux and ensured modular, reusable component architecture.
+-Collaborated on API integrations and delivered complete end-to-end feature workflows.
+
+### React Native (1 Month – Project Experience)
+-Developed cross-platform mobile UI using React Native components.
+-Implemented navigation flow and API integrations.
+-Applied React fundamentals to mobile architecture and component lifecycle.
+-Focused on performance optimization and responsive mobile layouts.
+-Utilized AI-assisted tooling to accelerate development and improve efficiency.
 
 ### UI Engineer
 - Converted design systems into maintainable code standards
-- Reduced UI inconsistencies by standardizing shared patterns and tokens
 - Focused on responsiveness, quality, and cross-browser behavior
-
-### Freelance Projects
-- Delivered portfolio and business websites end-to-end
-- Managed scope from wireframes to deployment and final QA
 
 ---
 
 ## Education
-- Bachelor's in Computer Science (or related technical discipline)
+- Bachelor's in Electronics Engineering 
 - Continued learning in frontend architecture, accessibility, and web performance
-- Practical project-based learning through real client and portfolio builds
+- Practical project-based learning through real client
 
 ---
 
 ## Skills
-**Core:** JavaScript, TypeScript, React, Next.js, Node.js
+**Core:** JavaScript, React,Redux Toolkit, Tailwind CSS, TypeScript,Next.js, Node.js
 
 **UI/UX:** Responsive Design, UI Animation, Design-to-Code, Interaction Design
 
@@ -140,10 +152,7 @@ I translate product goals into polished interfaces that users enjoy and teams ca
 
 ---
 
-## Highlights (Recruiter Quick View)
-- Projects Delivered: **20+**
-- Typical Lighthouse Target: **90+**
-- UI Quality Focus: **Reusable + Scalable + Accessible**`,
+`,
   "projects/featured.md": `# Featured Projects\n\n1. VS Code Portfolio UI\n2. Analytics Dashboard\n3. AI Notes Workspace`,
   "projects/all-projects.md": `# All Projects\n\n- E-commerce Storefront\n- Issue Tracker\n- Team Collaboration App\n- Documentation Platform\n- Portfolio Generator`,
   "projects/case-studies.md": `# Case Studies\n\n- Improving Lighthouse score from 72 to 98\n- Reducing bundle size by 41% with code splitting\n- Increasing retention with UX onboarding`,
@@ -179,10 +188,6 @@ const terminalLines = [
   "$ stack --primary",
   "> React, Next.js, TypeScript, Tailwind",
   "",
-  "$ projects --featured",
-  "> 1) VSCode Portfolio",
-  "> 2) Analytics Dashboard",
-  "> 3) AI Notes Workspace",
   "",
   "$ contact --now",
   "> hello@sristy.dev",
